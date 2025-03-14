@@ -279,75 +279,62 @@ body {
     background: #2c3e50;
   }
 
-/* Media Queries for Mobile Devices */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2.5em; /* Increase header font size */
-  }
-
-  header nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  header nav a {
-    display: block;
-    margin: 10px 0;
-  }
-
-  .profile {
-    width: 140px; /* Increase profile image size */
-    height: 140px;
-  }
-
-  .skill-bar-container {
-    height: 15px;
-  }
-
-  .project-item {
-    flex: 1 1 100%;
-  }
-
-  section {
-    margin: 1em 0.5em;
-    padding: 1em;
-  }
-
-  #contact {
-    margin: 1em;
-    padding: 1em;
-  }
+/* For iPhones (Portrait and Landscape) */
+@media (max-width: 600px) and (device-width: 375px) and (device-height: 667px), /* iPhone 6/7/8 */
+       (max-width: 667px) and (device-width: 375px) and (device-height: 812px) { /* iPhone X */
   
-  footer {
-    padding: 1em;
-  }
-}
-
-/* Additional Media Query for Smaller Devices */
-@media (max-width: 480px) {
   header h1 {
-    font-size: 2em; 
+    font-size: 2.5em; /* Increase font size of the header for better visibility */
   }
 
   .profile {
-    width: 120px; 
-    height: 120px;
+    width: 150px; /* Increase profile image size for iPhones */
+    height: 150px;
   }
 
   section p,
   .form-group input,
   .form-group textarea {
-    font-size: 0.9em; 
+    font-size: 1em; /* Adjust font size for better readability */
   }
 
   .btn {
-    font-size: 0.9em; 
+    font-size: 1em; /* Increase button text size */
   }
 
   section,
   #contact {
-    margin: 1em 0.5em;
-    padding: 1em;
+    margin: 1em 1em;
+    padding: 1.5em;
+  }
+}
+
+/* For Samsung Galaxy (Portrait) */
+@media (max-width: 600px) and (device-width: 412px) and (device-height: 732px), /* Samsung Galaxy S8 */
+       (max-width: 600px) and (device-width: 360px) and (device-height: 640px) { /* Galaxy S5 */
+  
+  header h1 {
+    font-size: 2.5em; /* Increase font size of the header for better visibility */
+  }
+
+  .profile {
+    width: 150px; /* Increase profile image size for Samsung devices */
+    height: 150px;
+  }
+
+  section p,
+  .form-group input,
+  .form-group textarea {
+    font-size: 1em; /* Adjust font size for better readability */
+  }
+
+  .btn {
+    font-size: 1em; /* Increase button text size */
+  }
+
+  section,
+  #contact {
+    margin: 1em 1em;
+    padding: 1.5em;
   }
 }
