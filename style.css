@@ -289,8 +289,8 @@ body {
   }
 
   .profile {
-    width: 180px; /* Increase profile image size more for iPhones */
-    height: 180px;
+    width: 180%; /* Increase profile image size more for iPhones */
+    height: 180%;
   }
 
   section p,
@@ -320,8 +320,8 @@ body {
   }
 
   .profile {
-    width: 180px; /* Increase profile image size for Samsung */
-    height: 180px;
+    width: 180%; /* Increase profile image size for Samsung */
+    height: 180%;
   }
 
   section p,
