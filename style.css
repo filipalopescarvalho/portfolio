@@ -136,6 +136,7 @@ body {
     flex-wrap: wrap;
     gap: 1em;
     margin-top: 1em;
+    list-style-type: none;
   }
   
   .project-item {
@@ -316,11 +317,11 @@ body {
        (max-width: 768px) and (device-width: 375px) { /* Samsung Galaxy S9 */
 
   header h1 {
-    font-size: 3em; /* Increase header font size for Samsung devices */
+    font-size: 3em; 
   }
 
   .profile {
-    width: 180%; /* Increase profile image size for Samsung */
+    width: 180%; 
     height: 180%;
   }
 
