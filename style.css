@@ -279,16 +279,20 @@ body {
     background: #2c3e50;
   }
 
-  /* Media Queries for Mobile Devices */
+ /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5em; /* Increase header font size */
+  }
+
   header nav a {
     display: block;
     margin: 10px 0;
   }
 
   .profile {
-    width: 100px;
-    height: 100px;
+    width: 120px; /* Increase profile image size */
+    height: 120px;
   }
 
   .skill-bar-container {
