@@ -278,3 +278,36 @@ body {
   .btn:hover {
     background: #2c3e50;
   }
+
+  /* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+  header nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .profile {
+    width: 100px;
+    height: 100px;
+  }
+
+  .skill-bar-container {
+    height: 15px;
+  }
+
+  .project-item {
+    flex: 1 1 100%;
+  }
+
+  section {
+    margin: 1em 0;
+  }
+
+  #contact {
+    margin: 1em;
+  }
+  
+  footer {
+    padding: 1em;
+  }
+}
