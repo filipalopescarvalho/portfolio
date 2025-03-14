@@ -280,26 +280,27 @@ body {
   }
 
 /* For iPhones (Portrait and Landscape) */
-@media (max-width: 600px) and (device-width: 375px) and (device-height: 667px), /* iPhone 6/7/8 */
-       (max-width: 667px) and (device-width: 375px) and (device-height: 812px) { /* iPhone X */
-  
+@media (max-width: 768px) and (device-width: 375px), /* iPhone 6/7/8 */
+       (max-width: 812px) and (device-width: 375px), /* iPhone X */
+       (max-width: 812px) and (device-width: 414px) { /* iPhone 11, iPhone XR */
+
   header h1 {
-    font-size: 2.5em; /* Increase font size of the header for better visibility */
+    font-size: 3em; /* Increase header font size more for iPhones */
   }
 
   .profile {
-    width: 150px; /* Increase profile image size for iPhones */
-    height: 150px;
+    width: 180px; /* Increase profile image size more for iPhones */
+    height: 180px;
   }
 
   section p,
   .form-group input,
   .form-group textarea {
-    font-size: 1em; /* Adjust font size for better readability */
+    font-size: 1.1em; /* Adjust font size slightly larger for better readability */
   }
 
   .btn {
-    font-size: 1em; /* Increase button text size */
+    font-size: 1.1em; /* Increase button font size for better visibility */
   }
 
   section,
@@ -309,27 +310,28 @@ body {
   }
 }
 
-/* For Samsung Galaxy (Portrait) */
-@media (max-width: 600px) and (device-width: 412px) and (device-height: 732px), /* Samsung Galaxy S8 */
-       (max-width: 600px) and (device-width: 360px) and (device-height: 640px) { /* Galaxy S5 */
-  
+/* For Samsung Galaxy (Portrait and Landscape) */
+@media (max-width: 768px) and (device-width: 412px), /* Samsung Galaxy S8 */
+       (max-width: 768px) and (device-width: 360px), /* Galaxy S5 */
+       (max-width: 768px) and (device-width: 375px) { /* Samsung Galaxy S9 */
+
   header h1 {
-    font-size: 2.5em; /* Increase font size of the header for better visibility */
+    font-size: 3em; /* Increase header font size for Samsung devices */
   }
 
   .profile {
-    width: 150px; /* Increase profile image size for Samsung devices */
-    height: 150px;
+    width: 180px; /* Increase profile image size for Samsung */
+    height: 180px;
   }
 
   section p,
   .form-group input,
   .form-group textarea {
-    font-size: 1em; /* Adjust font size for better readability */
+    font-size: 1.1em; /* Adjust font size for better readability */
   }
 
   .btn {
-    font-size: 1em; /* Increase button text size */
+    font-size: 1.1em; /* Increase button font size for better visibility */
   }
 
   section,
