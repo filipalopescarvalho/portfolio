@@ -279,10 +279,16 @@ body {
     background: #2c3e50;
   }
 
- /* Media Queries for Mobile Devices */
+/* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
   header h1 {
     font-size: 2.5em; /* Increase header font size */
+  }
+
+  header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   header nav a {
@@ -291,8 +297,8 @@ body {
   }
 
   .profile {
-    width: 120px; /* Increase profile image size */
-    height: 120px;
+    width: 140px; /* Increase profile image size */
+    height: 140px;
   }
 
   .skill-bar-container {
@@ -304,14 +310,44 @@ body {
   }
 
   section {
-    margin: 1em 0;
+    margin: 1em 0.5em;
+    padding: 1em;
   }
 
   #contact {
     margin: 1em;
+    padding: 1em;
   }
   
   footer {
+    padding: 1em;
+  }
+}
+
+/* Additional Media Query for Smaller Devices */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2em; 
+  }
+
+  .profile {
+    width: 120px; 
+    height: 120px;
+  }
+
+  section p,
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.9em; 
+  }
+
+  .btn {
+    font-size: 0.9em; 
+  }
+
+  section,
+  #contact {
+    margin: 1em 0.5em;
     padding: 1em;
   }
 }
