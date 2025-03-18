@@ -92,27 +92,27 @@ body {
   }
   
   .skill-html {
-    background-color: #c0392b; /* Red */
+    background-color: #e74c3c; /* Toned-down Red */
 }
 
 .skill-css {
-    background-color: #3498db; /* Light Blue */
+    background-color: #5dade2; /* Toned-down Light Blue */
 }
 
 .skill-react {
-    background-color: #2980b9; /* Medium Blue */
+    background-color: #6c7e99; /* Toned-down Medium Blue */
 }
 
 .skill-typescript {
-    background-color: #16a085; /* Teal */
+    background-color: #1abc9c; /* Toned-down Teal */
 }
 
 .skill-javascript {
-    background-color: #f39c12; /* Orange */
+    background-color: #f39c12; /* Toned-down Orange */
 }
 
 .skill-python {
-    background-color: #27ae60; /* Green */
+    background-color: #2ecc71; /* Toned-down Green */
 }
 
 
