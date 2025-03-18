@@ -91,30 +91,31 @@ body {
     left: 0;
   }
   
-  /* Different colors for skill bars */
   .skill-html {
     background-color: #c0392b; /* Red */
-  }
-  
-  .skill-css {
-    background-color: #2980b9; /* Blue */
-  }
-  
-  .skill-react {
-    background-color: #8e44ad; /* Purple */
-  }
-  
-  .skill-typescript {
+}
+
+.skill-css {
+    background-color: #3498db; /* Light Blue */
+}
+
+.skill-react {
+    background-color: #2980b9; /* Medium Blue */
+}
+
+.skill-typescript {
     background-color: #16a085; /* Teal */
-  }
-  
-  .skill-javascript {
+}
+
+.skill-javascript {
     background-color: #f39c12; /* Orange */
-  }
-  
-  .skill-python {
+}
+
+.skill-python {
     background-color: #27ae60; /* Green */
-  }
+}
+
+
   
   /* Project Section */
   #projects {
