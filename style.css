@@ -72,10 +72,9 @@ h2 {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  object-fit: cover; /* This ensures the image covers the circle without squashing */
   display: block;
   margin: 10px auto 20px;
-  box-shadow: 0 0 12px rgba(0, 191, 166, 0.4);
-  transition: transform 0.3s ease;
 }
 
 .profile:hover {
