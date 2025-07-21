@@ -30,46 +30,21 @@
   </head>
 
   <body class="bg-lavender text-slate">
-
+    <!-- Header -->
     <header class="bg-white/80 backdrop-blur-md fixed top-0 left-0 w-full z-50 shadow-sm">
-  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-    <h1 class="text-xl font-bold text-softLavender">Filipa Lopes</h1>
-
-    <button id="menu-btn" class="md:hidden text-3xl text-softLavender">
-      ☰
-    </button>
-
-    <nav id="menu" class="hidden md:flex gap-4 items-center text-sm md:text-base">
-      <a href="#about" class="px-4 py-2 rounded-md bg-violet-100 text-slate-700 font-medium hover:bg-violet-200 transition">About</a>
-      <a href="#skills" class="px-4 py-2 rounded-md bg-violet-100 text-slate-700 font-medium hover:bg-violet-200 transition">Skills</a>
-      <a href="#projects" class="px-4 py-2 rounded-md bg-violet-100 text-slate-700 font-medium hover:bg-violet-200 transition">Projects</a>
-      <a href="mailto:filopesdecarvalho@gmail.com"
-         class="inline-block bg-violet-300 text-slate-700 font-semibold px-4 py-2 rounded-full shadow hover:bg-violet-400 transition">
-        Contact Me
-      </a>
-    </nav>
-  </div>
-
-  <div id="mobile-menu" class="hidden flex-col items-center space-y-2 p-4 md:hidden bg-white/80 backdrop-blur-md shadow">
-    <a href="#about" class="block px-4 py-2 rounded-md bg-violet-100 text-slate-700 font-medium hover:bg-violet-200 transition">About</a>
-    <a href="#skills" class="block px-4 py-2 rounded-md bg-violet-100 text-slate-700 font-medium hover:bg-violet-200 transition">Skills</a>
-    <a href="#projects" class="block px-4 py-2 rounded-md bg-violet-100 text-slate-700 font-medium hover:bg-violet-200 transition">Projects</a>
-    <a href="mailto:filopesdecarvalho@gmail.com"
-       class="inline-block bg-violet-300 text-slate-700 font-semibold px-4 py-2 rounded-full shadow hover:bg-violet-400 transition">
-      Contact Me
-    </a>
-  </div>
-</header>
-
-<script>
-  const menuBtn = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-    mobileMenu.classList.toggle('flex');
-  });
-</script>
+      <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-xl font-bold text-softLavender">Filipa Lopes</h1>
+        <nav class="flex gap-4 items-center text-sm md:text-base">
+          <a href="#about" class="px-4 py-2 rounded-md bg-violet-100 text-slate-700 font-medium hover:bg-violet-200 transition">About</a>
+          <a href="#skills" class="px-4 py-2 rounded-md bg-violet-100 text-slate-700 font-medium hover:bg-violet-200 transition">Skills</a>
+          <a href="#projects" class="px-4 py-2 rounded-md bg-violet-100 text-slate-700 font-medium hover:bg-violet-200 transition">Projects</a>
+          <a href="mailto:filopesdecarvalho@gmail.com"
+             class="inline-block bg-violet-300 text-slate-700 font-semibold px-4 py-2 rounded-full shadow hover:bg-violet-400 transition">
+            Contact Me
+          </a>
+        </nav>        
+      </div>
+    </header>
 
     <section id="about" class="py-24 px-6 bg-white rounded-lg max-w-6xl mx-auto mt-20 mb-24">
       <div class="text-center">
@@ -242,4 +217,3 @@
     </footer>
   </body>
 </html>
-
