@@ -2,197 +2,151 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Filipa's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filipa Lopes | Portfolio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Segoe UI', 'sans-serif'],
+          },
+          colors: {
+            lavender: '#f4f1fb',
+            bluegray: '#c7d2fe',
+            violet: '#a78bfa',
+            slate: '#374151'
+          }
+        }
+      }
+    };
+  </script>
   <style>
-    /* Pastel lavender, pink, and gray colors */
-    :root {
-      --pastel-lavender: #c3bef0;
-      --pastel-pink: #f9c6c9;
-      --pastel-gray: #f3f4f6;
-      --dark-lavender: #9a87d1;
-      --dark-pink: #d17b81;
-      --text-gray: #4b4b4b;
-    }
-
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--pastel-gray);
-      color: var(--text-gray);
-    }
-
-    /* Button styles */
-    .btn-primary {
-      background-color: var(--pastel-lavender);
-      color: var(--text-gray);
-      font-weight: 600;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-    .btn-primary:hover {
-      background-color: var(--pastel-pink);
-      color: var(--dark-pink);
-      transform: scale(1.05);
-    }
-
-    /* Navigation link hover */
-    nav a:hover {
-      color: var(--pastel-pink);
-    }
-
-    /* Project image hover zoom */
-    .project-image {
-      transition: transform 0.3s ease;
-    }
-    .project-image:hover {
-      transform: scale(1.05);
+      font-family: 'Segoe UI', sans-serif;
     }
   </style>
 </head>
-<body>
 
-  <header class="bg-[var(--pastel-lavender)] shadow sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center px-6 py-4">
-      <h1 class="text-3xl font-extrabold tracking-tight text-gray-700">Filipa's Portfolio</h1>
-      <nav class="space-x-6 mt-3 sm:mt-0 text-gray-600 font-semibold">
-        <a href="#about" class="hover:text-[var(--pastel-pink)] transition-colors">About Me</a>
-        <a href="#skills" class="hover:text-[var(--pastel-pink)] transition-colors">Skills</a>
-        <a href="#projects" class="hover:text-[var(--pastel-pink)] transition-colors">Projects</a>
-        <a href="#contact" class="hover:text-[var(--pastel-pink)] transition-colors">Contact</a>
-        <a href="files/Filipa_Lopes_Resume.pdf" target="_blank" class="ml-4 inline-block bg-[var(--pastel-pink)] rounded px-4 py-2 shadow-lg hover:bg-[var(--dark-pink)] hover:text-white transition">Resume</a>
+<body class="bg-lavender text-slate">
+
+  <header class="bg-violet-400 text-white shadow sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Filipa Lopes</h1>
+      <nav class="space-x-4 text-sm md:text-base">
+        <a href="#about" class="hover:underline">About</a>
+        <a href="#skills" class="hover:underline">Skills</a>
+        <a href="#projects" class="hover:underline">Projects</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+        <a href="files/Filipa_Lopes_Resume.pdf" download class="bg-white text-violet-600 px-3 py-1 rounded hover:bg-violet-100 font-semibold">Resume</a>
       </nav>
     </div>
   </header>
 
-  <main class="max-w-5xl mx-auto px-6 py-12">
+  <section id="about" class="py-16 px-6 text-center max-w-3xl mx-auto" data-aos="fade-up">
+    <img src="images/profile1.jpg" alt="Filipa Lopes" class="w-36 h-36 rounded-full mx-auto mb-6 object-cover shadow-md">
+    <h2 class="text-3xl font-bold mb-4">Hi, I'm Filipa</h2>
+    <p class="text-lg leading-relaxed">
+      I'm a web development student at IU International Hochschule, passionate about building modern, responsive user interfaces and learning cutting-edge technologies like React and Python. Let’s collaborate or chat code!
+    </p>
+    <a href="files/Filipa_Lopes_Resume.pdf" download class="mt-6 inline-block bg-violet-400 text-white px-6 py-3 rounded-lg shadow hover:bg-violet-500 transition">
+      Download Resume
+    </a>
+  </section>
 
-    <section id="about" class="text-center mb-20">
-      <h2 class="text-4xl font-extrabold mb-6 text-[var(--dark-lavender)]">About Me</h2>
-      <img src="images/profile1.jpg" alt="Filipa's profile picture" class="w-40 h-40 rounded-full mx-auto object-cover shadow-md border-4 border-[var(--pastel-pink)] mb-8" />
-      <p class="max-w-3xl mx-auto text-lg leading-relaxed tracking-wide">
-        Hi, I’m Filipa Lopes de Carvalho, a passionate web development student focusing on creating user-friendly, responsive web experiences using HTML, CSS, JavaScript, TypeScript, React, and Python.
-        I enjoy turning ideas into beautiful, clean code and always love learning new tech and improving my skills. Let's connect!
-      </p>
-      <a href="files/Filipa_Lopes_Resume.pdf" download
-        class="btn-primary inline-block mt-8 px-8 py-3 rounded-lg shadow-lg">
-        Download Resume
-      </a>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="mb-20">
-      <h2 class="text-4xl font-extrabold mb-12 text-center text-[var(--dark-lavender)]">Skills</h2>
-      <div class="grid md:grid-cols-3 gap-10">
-        <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow">
-          <h3 class="text-2xl font-bold mb-4 text-[var(--pastel-pink)]">Frontend Development</h3>
-          <ul class="list-disc list-inside space-y-2 text-lg font-medium">
+  <section id="skills" class="bg-bluegray py-16 px-6" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-10">Skills</h2>
+      <div class="grid md:grid-cols-3 gap-8 text-left">
+        <div data-aos="fade-right">
+          <h3 class="text-xl font-semibold mb-3">Frontend</h3>
+          <ul class="list-disc list-inside space-y-1">
             <li>HTML & CSS</li>
             <li>JavaScript & TypeScript</li>
             <li>React</li>
-            <li>Responsive & Accessible Design</li>
+            <li>Responsive Design</li>
           </ul>
         </div>
-        <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow">
-          <h3 class="text-2xl font-bold mb-4 text-[var(--pastel-pink)]">Backend Development</h3>
-          <ul class="list-disc list-inside space-y-2 text-lg font-medium">
+        <div data-aos="fade-up">
+          <h3 class="text-xl font-semibold mb-3">Backend</h3>
+          <ul class="list-disc list-inside space-y-1">
             <li>Python</li>
             <li>Node.js & Express</li>
             <li>REST APIs</li>
-            <li>Basic Database Integration</li>
+            <li>Basic Databases</li>
           </ul>
         </div>
-        <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow">
-          <h3 class="text-2xl font-bold mb-4 text-[var(--pastel-pink)]">Tools & Workflow</h3>
-          <ul class="list-disc list-inside space-y-2 text-lg font-medium">
+        <div data-aos="fade-left">
+          <h3 class="text-xl font-semibold mb-3">Tools</h3>
+          <ul class="list-disc list-inside space-y-1">
             <li>Git & GitHub</li>
-            <li>Visual Studio Code</li>
-            <li>Agile Development</li>
+            <li>VS Code</li>
+            <li>Agile Workflow</li>
           </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="projects" class="mb-20">
-      <h2 class="text-4xl font-extrabold mb-12 text-center text-[var(--dark-lavender)]">Projects</h2>
-      <div class="grid md:grid-cols-3 gap-10">
-        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
-          <img src="images/translator.jpg" alt="Translator Project" class="project-image w-full h-48 object-cover" />
-          <div class="p-6">
-            <h3 class="text-2xl font-bold mb-3 text-[var(--pastel-pink)]">Translator</h3>
-            <p class="mb-4 text-gray-700">A language translator web app allowing instant translations between multiple languages using HTML, CSS, and JavaScript.</p>
-            <a href="https://filipalopescarvalho.github.io/translator/" target="_blank" class="text-[var(--pastel-pink)] font-semibold hover:underline">View Project</a>
-          </div>
+  <section id="projects" class="py-16 px-6" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <div class="bg-white rounded-lg shadow hover:shadow-xl transition p-4" data-aos="zoom-in">
+          <img src="images/translator.jpg" alt="Translator" class="rounded mb-4 h-40 object-cover w-full">
+          <h3 class="text-lg font-bold mb-2">Translator App</h3>
+          <p class="text-sm mb-3">A language translator built with JavaScript that uses an API to convert text between languages.</p>
+          <a href="https://filipalopescarvalho.github.io/translator/" target="_blank" class="text-violet-600 hover:underline">View Project</a>
         </div>
 
-        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
-          <img src="images/comedianbot.jpg" alt="Comedian Bot Project" class="project-image w-full h-48 object-cover" />
-          <div class="p-6">
-            <h3 class="text-2xl font-bold mb-3 text-[var(--pastel-pink)]">Comedian Bot</h3>
-            <p class="mb-4 text-gray-700">Responsive, modern site with interactive UI for a comedic chatbot experience built using core web technologies.</p>
-            <a href="https://filipalopescarvalho.github.io/comedianbot/" target="_blank" class="text-[var(--pastel-pink)] font-semibold hover:underline">View Project</a>
-          </div>
+        <div class="bg-white rounded-lg shadow hover:shadow-xl transition p-4" data-aos="zoom-in">
+          <img src="images/comedianbot.jpg" alt="Comedian Bot" class="rounded mb-4 h-40 object-cover w-full">
+          <h3 class="text-lg font-bold mb-2">Comedian Bot</h3>
+          <p class="text-sm mb-3">A fun chatbot-style website with jokes and playful interaction, built with HTML, CSS, and JavaScript.</p>
+          <a href="https://filipalopescarvalho.github.io/comedianbot/" target="_blank" class="text-violet-600 hover:underline">View Project</a>
         </div>
 
-        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
-          <img src="images/triviagame.jpg" alt="Trivia Game Project" class="project-image w-full h-48 object-cover" />
-          <div class="p-6">
-            <h3 class="text-2xl font-bold mb-3 text-[var(--pastel-pink)]">Trivia Game</h3>
-            <p class="mb-4 text-gray-700">Interactive trivia game featuring multiple-choice questions with feedback, focusing on JavaScript logic and responsive design.</p>
-            <a href="https://filipalopescarvalho.github.io/triviagame/" target="_blank" class="text-[var(--pastel-pink)] font-semibold hover:underline">View Project</a>
-          </div>
+        <div class="bg-white rounded-lg shadow hover:shadow-xl transition p-4" data-aos="zoom-in">
+          <img src="images/triviagame.jpg" alt="Trivia Game" class="rounded mb-4 h-40 object-cover w-full">
+          <h3 class="text-lg font-bold mb-2">Trivia Game</h3>
+          <p class="text-sm mb-3">A multiple-choice quiz web app with scoring logic and JavaScript interactivity. Clean and responsive design.</p>
+          <a href="https://filipalopescarvalho.github.io/triviagame/" target="_blank" class="text-violet-600 hover:underline">View Project</a>
         </div>
+
       </div>
-    </section>
+    </div>
+  </section>
 
-
-    <section id="contact" class="bg-white rounded-xl shadow-md p-10 max-w-xl mx-auto mb-20">
-      <h2 class="text-4xl font-extrabold mb-10 text-center text-[var(--pastel-pink)]">Contact</h2>
-      <form action="https://formsubmit.co/filopesdecarvalho@gmail.com" method="POST" class="space-y-6">
-        <div>
-          <label for="name" class="block mb-2 font-semibold text-gray-700">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--pastel-pink)]"
-          />
-        </div>
-        <div>
-          <label for="email" class="block mb-2 font-semibold text-gray-700">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--pastel-pink)]"
-          />
-        </div>
-        <div>
-          <label for="message" class="block mb-2 font-semibold text-gray-700">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            required
-            class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--pastel-pink)] resize-none"
-          ></textarea>
-        </div>
-        <button type="submit" class="btn-primary w-full py-3 rounded-lg shadow-lg">Send Message</button>
+  <section id="contact" class="bg-bluegray py-16 px-6" data-aos="fade-up">
+    <div class="max-w-xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Get in Touch</h2>
+      <form action="https://formsubmit.co/filopesdecarvalho@gmail.com" method="POST" class="space-y-4 text-left">
+        <input type="text" name="name" placeholder="Your Name" required class="w-full border rounded px-4 py-2">
+        <input type="email" name="email" placeholder="Your Email" required class="w-full border rounded px-4 py-2">
+        <textarea name="message" rows="4" placeholder="Your Message" required class="w-full border rounded px-4 py-2"></textarea>
+        <button type="submit" class="w-full bg-violet-400 text-white py-2 rounded hover:bg-violet-500 transition">Send Message</button>
       </form>
-    </section>
+    </div>
+  </section>
 
-  </main>
-
-  <footer class="bg-[var(--pastel-lavender)] text-gray-700 text-center py-6">
-    <p class="mb-2">&copy; 2025 Filipa's Portfolio</p>
-    <p>
-      Connect with me on
-      <a href="https://github.com/filipalopescarvalho" target="_blank" class="underline hover:text-[var(--pastel-pink)]">GitHub</a>,
-      and
-      <a href="https://www.linkedin.com/in/filipa-lopes-de-carvalho-6878222b0" target="_blank" class="underline hover:text-[var(--pastel-pink)]">LinkedIn</a>
+  <footer class="bg-violet-400 text-white text-center py-6 mt-12">
+    <p>&copy; 2025 Filipa Lopes</p>
+    <p class="mt-2">
+      <a href="https://github.com/filipalopescarvalho" class="hover:underline" target="_blank">GitHub</a> •
+      <a href="https://www.linkedin.com/in/filipa-lopes-de-carvalho-6878222b0" class="hover:underline" target="_blank">LinkedIn</a>
     </p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 700,
+      offset: 80
+    });
+  </script>
 </body>
 </html>
