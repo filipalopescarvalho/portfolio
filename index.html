@@ -30,50 +30,32 @@
   </head>
 
   <body class="bg-lavender text-slate">
-<!-- Header -->
-<header class="bg-white/80 backdrop-blur-md fixed top-0 left-0 w-full z-50 shadow-sm">
-  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-    <h1 class="text-xl font-bold text-softLavender">Filipa Lopes</h1>
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md fixed top-0 left-0 w-full z-50 shadow-sm">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-xl font-bold text-softLavender">Filipa Lopes</h1>
+        <nav class="flex gap-4 items-center text-sm md:text-base">
+          <a href="#about" class="px-4 py-2 rounded-md bg-violet-100 text-slate-700 font-medium hover:bg-violet-200 transition">About</a>
+          <a href="#skills" class="px-4 py-2 rounded-md bg-violet-100 text-slate-700 font-medium hover:bg-violet-200 transition">Skills</a>
+          <a href="#projects" class="px-4 py-2 rounded-md bg-violet-100 text-slate-700 font-medium hover:bg-violet-200 transition">Projects</a>
+          <a href="mailto:filopesdecarvalho@gmail.com"
+             class="inline-block bg-violet-300 text-slate-700 font-semibold px-4 py-2 rounded-full shadow hover:bg-violet-400 transition">
+            Contact Me
+          </a>
+        </nav>        
+      </div>
+    </header>
 
-    <!-- Hamburger Button (Mobile) -->
-    <button id="menu-btn" class="md:hidden text-3xl text-softLavender">
-      ☰
-    </button>
-
-    <!-- Navigation Menu -->
-    <nav id="menu" class="hidden md:flex gap-4 items-center text-sm md:text-base">
-      <a href="#about" class="px-4 py-2 rounded-md bg-violet-100 text-slate-700 font-medium hover:bg-violet-200 transition">About</a>
-      <a href="#skills" class="px-4 py-2 rounded-md bg-violet-100 text-slate-700 font-medium hover:bg-violet-200 transition">Skills</a>
-      <a href="#projects" class="px-4 py-2 rounded-md bg-violet-100 text-slate-700 font-medium hover:bg-violet-200 transition">Projects</a>
-      <a href="mailto:filopesdecarvalho@gmail.com"
-         class="inline-block bg-violet-300 text-slate-700 font-semibold px-4 py-2 rounded-full shadow hover:bg-violet-400 transition">
-        Contact Me
-      </a>
-    </nav>
-  </div>
-
-  <!-- Mobile Menu (Dropdown) -->
-  <div id="mobile-menu" class="hidden flex-col items-center space-y-2 p-4 md:hidden bg-white/80 backdrop-blur-md shadow">
-    <a href="#about" class="block px-4 py-2 rounded-md bg-violet-100 text-slate-700 font-medium hover:bg-violet-200 transition">About</a>
-    <a href="#skills" class="block px-4 py-2 rounded-md bg-violet-100 text-slate-700 font-medium hover:bg-violet-200 transition">Skills</a>
-    <a href="#projects" class="block px-4 py-2 rounded-md bg-violet-100 text-slate-700 font-medium hover:bg-violet-200 transition">Projects</a>
-    <a href="mailto:filopesdecarvalho@gmail.com"
-       class="inline-block bg-violet-300 text-slate-700 font-semibold px-4 py-2 rounded-full shadow hover:bg-violet-400 transition">
-      Contact Me
-    </a>
-  </div>
-</header>
-
-<!-- Toggle Script -->
-<script>
-  const menuBtn = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-    mobileMenu.classList.toggle('flex');
-  });
-</script>
+    <section id="about" class="py-24 px-6 bg-white rounded-lg max-w-6xl mx-auto mt-20 mb-24">
+      <div class="text-center">
+        <!-- Profile Photo -->
+        <img src="images/profile1.jpg" alt="Profile Picture"
+             class="w-36 h-36 rounded-full mx-auto mb-6 shadow-lg object-cover border-4 border-violet-200" />
+    
+        <!-- Intro Title -->
+        <h2 class="text-3xl font-bold text-slate-800">Hey, I'm Filipa.</h2>
+        <p class="text-xl text-softLavender mt-1 mb-10 font-semibold">Software Developer</p>
+    
         <!-- About Me Text -->
         <p class="text-lg leading-relaxed mb-12 max-w-3xl mx-auto font-[Segoe UI] text-gray-800">
           I’m a software developer passionate about creating apps that solve real problems — especially for things I care about.
@@ -151,9 +133,9 @@
 </section>
 
 <!-- Projects Section -->
-<section id="projects" class="py-20 px-6 bg-white rounded-lg max-w-6xl mx-auto mt-12 max-w-full sm:px-4">
+<section id="projects" class="py-20 px-6 bg-white rounded-lg max-w-6xl mx-auto mt-12">
   <h2 class="text-4xl font-bold text-center text-slate-800 mb-12">Projects</h2>
-  <div class="grid gap-10 grid-cols-1 sm:grid-cols-1 md:grid-cols-3">
+  <div class="grid gap-10 md:grid-cols-3">
     <!-- Translator App -->
     <div
       class="bg-violet-50 rounded-xl shadow-lg p-6 cursor-pointer transform transition-transform duration-300 hover:scale-105 flex flex-col"
@@ -221,15 +203,17 @@
 <!-- Contact Section -->
 <section id="contact" class="py-20 px-6 bg-white rounded-lg max-w-6xl mx-auto mt-12">
   <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-3xl font-bold text-slate-800 mb-6">Contact</h2>
-    <p class="mb-12 text-lg text-gray-700 max-w-xl mx-auto">
-      Interested in working together or have any questions? Feel free to reach out!
-    </p>
-    <a href="mailto:filopesdecarvalho@gmail.com"
-       class="inline-block bg-violet-300 text-slate-700 font-semibold px-6 py-3 rounded-lg shadow hover:bg-violet-600 hover:shadow-lg transition duration-300">
-      Email Me
+    <h2 class="text-3xl font-bold mb-8 text-slate-700">Get in Touch</h2>
+    <a href="mailto:filopesdecarvalho@gmail.com" 
+       class="inline-block bg-violet-600 text-white font-semibold px-8 py-3 rounded shadow hover:bg-violet-700 transition">
+      Contact Me
     </a>
   </div>
 </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 text-sm text-slate-500 bg-lavender">
+      &copy; 2025 Filipa Lopes
+    </footer>
   </body>
 </html>
