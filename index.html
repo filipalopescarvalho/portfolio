@@ -1,277 +1,164 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Filipa Lopes | Portfolio</title>
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Segoe UI', 'sans-serif'],
-          },
-          colors: {
-            lavender: '#f4f1fb',
-            bluegray: '#c7d2fe',
-            violet: {
-              50: '#faf5ff',
-              100: '#f3e8ff',
-              200: '#e9d5ff',
-              300: '#d8b4fe',
-              400: '#c084fc',
-              500: '#a855f7',
-              600: '#9333ea',
-              700: '#7e22ce',
-              800: '#6b21a8',
-              900: '#581c87',
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filipa Lopes | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Segoe UI', 'sans-serif'],
             },
-            slate: {
-              700: '#374151',
-              800: '#1e293b',
-            }
-          }
-        }
+            colors: {
+              lavender: '#f4f1fb',
+              slate: '#374151',
+              softLavender: '#b497d6',
+              softPink: '#f9e5f2',
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
       }
-    };
-  </script>
+    </style>
+  </head>
 
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f1fb; /* lavender */
-    }
-    /* Rotating skills ring */
-    @keyframes spin-slow {
-      from { transform: rotate(0deg);}
-      to { transform: rotate(360deg);}
-    }
-    .skills-ring {
-      animation: spin-slow 30s linear infinite;
-    }
-    /* Header disappear on scroll */
-    header {
-      transition: transform 0.3s ease;
-      will-change: transform;
-    }
-  </style>
-</head>
-<body class="text-slate-800">
-
-  <!-- Header -->
-  <header id="header" class="fixed top-0 left-0 right-0 bg-violet-200 shadow-md z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold tracking-wide text-slate-800">Filipa Lopes</h1>
-      <nav class="space-x-6 text-sm md:text-base font-semibold text-slate-700">
-        <a href="#about" class="hover:text-violet-700 transition">About</a>
-        <a href="#skills" class="hover:text-violet-700 transition">Skills</a>
-        <a href="#projects" class="hover:text-violet-700 transition">Projects</a>
-        <a href="#contact" class="hover:text-violet-700 transition">Contact</a>
-        <a href="files/Filipa_Lopes_Resume.pdf" download
-           class="ml-4 px-4 py-2 bg-violet-600 text-white rounded-lg hover:bg-violet-700 transition inline-block">Resume</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="pt-20">
-
-    <!-- Hero -->
-    <section class="min-h-screen flex flex-col md:flex-row items-center justify-center bg-lavender relative overflow-hidden px-6 md:px-20 py-20">
-
-      <!-- Abstract blurred circle behind profile -->
-      <div class="absolute -top-32 -left-32 w-96 h-96 bg-violet-300 rounded-full mix-blend-multiply filter blur-3xl opacity-50 pointer-events-none"></div>
-
-      <!-- Left: Profile + rotating skills ring -->
-      <div class="relative flex-shrink-0 w-72 h-72 md:w-96 md:h-96 mb-12 md:mb-0">
-        <img
-          src="images/profile1.jpg"
-          alt="Filipa Lopes"
-          class="rounded-full border-8 border-violet-200 shadow-lg object-cover w-full h-full"
-        />
-
-        <ul class="absolute inset-0 flex items-center justify-center skills-ring pointer-events-none text-violet-700 font-semibold text-sm md:text-base">
-          <li class="absolute top-0 left-1/2 -translate-x-1/2">HTML</li>
-          <li class="absolute top-1/4 right-0 -translate-y-1/2">CSS</li>
-          <li class="absolute bottom-1/4 right-0 -translate-y-1/2">JavaScript</li>
-          <li class="absolute bottom-0 left-1/2 -translate-x-1/2">React</li>
-          <li class="absolute bottom-1/4 left-0 -translate-y-1/2">Python</li>
-          <li class="absolute top-1/4 left-0 -translate-y-1/2">TypeScript</li>
-        </ul>
+  <body class="bg-lavender text-slate">
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md fixed top-0 left-0 w-full z-50 shadow-sm">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-xl font-bold text-softLavender">Filipa Lopes</h1>
+        <nav class="space-x-6 text-sm md:text-base">
+          <a href="#about" class="hover:underline">About</a>
+          <a href="#skills" class="hover:underline">Skills</a>
+          <a href="#projects" class="hover:underline">Projects</a>
+          <a href="#contact" class="hover:underline">Contact</a>
+        </nav>
       </div>
+    </header>
 
-      <!-- Right: Name + tagline -->
-      <div class="max-w-xl md:max-w-2xl text-center md:text-left">
-        <h1 class="text-5xl md:text-7xl font-extrabold text-slate-800 leading-tight mb-6 tracking-tight">
-          Filipa<br />
-          <span class="text-violet-600">Lopes</span><br />
-          <span class="text-lg md:text-xl font-semibold text-violet-400 tracking-wide uppercase">Web Developer &amp; Creative Coder</span>
-        </h1>
-
-        <p class="text-slate-600 text-lg md:text-xl max-w-lg leading-relaxed">
-          I build user-friendly and responsive web experiences that bring ideas to life with clean, modern code.
+    <!-- Hero Section -->
+    <section id="about" class="min-h-screen flex items-center justify-center px-6 pt-32 pb-20 bg-lavender">
+      <div class="max-w-4xl text-center">
+        <img src="images/profile1.jpg" alt="Filipa Profile" class="w-40 h-40 mx-auto mb-6 rounded-full shadow-md object-cover border-4 border-softLavender" />
+        <h2 class="text-4xl font-bold text-softLavender mb-4">Hi, I'm Filipa Lopes</h2>
+        <p class="text-lg text-slate-700 max-w-2xl mx-auto">
+          A passionate <strong>Software Developer</strong> with a focus on crafting accessible and user-centered experiences using JavaScript, TypeScript, React, and Python.
+          I love bringing concepts to life through clean, functional code and continuous learning.
         </p>
-      </div>
-
-    </section>
-
-    <!-- About -->
-    <section id="about" class="relative bg-white py-24 px-6 md:px-20 overflow-hidden">
-      <!-- Diagonal accent shape -->
-      <div class="absolute top-0 left-0 w-full h-full -skew-y-6 origin-top-left bg-violet-100 -z-10"></div>
-
-      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center relative">
-        <div>
-          <h2 class="text-4xl font-extrabold mb-6 text-slate-800 tracking-tight">About Me</h2>
-          <p class="text-lg text-slate-700 leading-relaxed mb-6">
-            Hi, I’m <strong>Filipa Lopes de Carvalho</strong>, a passionate web development student at IU International Hochschule.
-            I focus on HTML, CSS, JavaScript, TypeScript, React, and Python to build user-friendly and responsive web experiences.
-            I love turning ideas into clean, functional code, and I’m always eager to learn and explore new technologies.
-          </p>
-          <p class="text-lg text-slate-700 leading-relaxed">
-            Let’s connect for projects, collaborations, or just a chat about tech!
-          </p>
-        </div>
-
-        <div class="rounded-lg overflow-hidden shadow-lg border-8 border-violet-200">
-          <img src="images/profile1.jpg" alt="Filipa Lopes" class="w-full object-cover aspect-square" />
-        </div>
+        <a
+          href="files/Filipa_Lopes_Resume.pdf"
+          download
+          class="mt-8 inline-block bg-softLavender text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-purple-700 transition"
+        >
+          Download Resume
+        </a>
       </div>
     </section>
 
-    <!-- Skills -->
-    <section id="skills" class="bg-lavender py-20 px-6 md:px-20 font-sans">
-      <div class="max-w-7xl mx-auto text-center mb-16">
-        <h2 class="text-5xl font-extrabold text-slate-800 tracking-tight mb-4">Skills</h2>
-        <p class="text-slate-600 max-w-2xl mx-auto text-lg">Technologies and tools I use to craft great projects.</p>
-      </div>
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-slate-700 mb-10">Skills</h2>
 
-      <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
-        <div class="bg-white rounded-2xl shadow-lg p-8 border border-violet-300 hover:shadow-2xl transition">
-          <h3 class="text-2xl font-semibold text-violet-800 mb-6">Frontend Development</h3>
-          <ul class="space-y-3 text-slate-700 text-lg">
-            <li>HTML &amp; CSS</li>
-            <li>JavaScript &amp; TypeScript</li>
-            <li>React</li>
-            <li>Responsive & Accessible Design</li>
-          </ul>
+        <div class="grid md:grid-cols-3 gap-8 text-left">
+          <!-- Frontend -->
+          <div class="bg-softPink p-6 rounded-lg shadow hover:shadow-lg transition">
+            <h3 class="text-xl font-bold text-softLavender mb-4">Frontend</h3>
+            <ul class="space-y-2 text-slate-700">
+              <li>HTML & CSS</li>
+              <li>JavaScript & TypeScript</li>
+              <li>React</li>
+              <li>Responsive Design</li>
+            </ul>
+          </div>
+
+          <!-- Backend -->
+          <div class="bg-softPink p-6 rounded-lg shadow hover:shadow-lg transition">
+            <h3 class="text-xl font-bold text-softLavender mb-4">Backend</h3>
+            <ul class="space-y-2 text-slate-700">
+              <li>Python</li>
+              <li>Node.js & Express</li>
+              <li>REST APIs</li>
+              <li>MongoDB Basics</li>
+            </ul>
+          </div>
+
+          <!-- Tools -->
+          <div class="bg-softPink p-6 rounded-lg shadow hover:shadow-lg transition">
+            <h3 class="text-xl font-bold text-softLavender mb-4">Tools</h3>
+            <ul class="space-y-2 text-slate-700">
+              <li>Git & GitHub</li>
+              <li>Visual Studio Code</li>
+              <li>Figma (Basic)</li>
+              <li>Agile Collaboration</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="bg-white rounded-2xl shadow-lg p-8 border border-violet-300 hover:shadow-2xl transition">
-          <h3 class="text-2xl font-semibold text-violet-800 mb-6">Backend Development</h3>
-          <ul class="space-y-3 text-slate-700 text-lg">
-            <li>Python</li>
-            <li>Node.js & Express</li>
-            <li>REST APIs</li>
-            <li>Basic Database Integration</li>
-          </ul>
-        </div>
-
-        <div class="bg-white rounded-2xl shadow-lg p-8 border border-violet-300 hover:shadow-2xl transition">
-          <h3 class="text-2xl font-semibold text-violet-800 mb-6">Tools & Workflow</h3>
-          <ul class="space-y-3 text-slate-700 text-lg">
-            <li>Git & GitHub</li>
-            <li>Visual Studio Code</li>
-            <li>Agile Development</li>
-          </ul>
+        <!-- Social Links -->
+        <div class="mt-12 text-center">
+          <p class="text-lg font-semibold text-slate-700 mb-2">Find me online:</p>
+          <div class="space-x-4">
+            <a href="https://github.com/filipalopescarvalho" target="_blank" class="text-softLavender hover:underline font-medium">GitHub</a>
+            <a href="https://www.linkedin.com/in/filipa-lopes-de-carvalho-6878222b0" target="_blank" class="text-softLavender hover:underline font-medium">LinkedIn</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="py-20 px-6 md:px-20 bg-white">
-      <div class="max-w-7xl mx-auto text-center mb-16">
-        <h2 class="text-5xl font-extrabold text-slate-800 tracking-tight mb-6">Projects</h2>
-        <p class="text-slate-600 max-w-3xl mx-auto text-lg">A showcase of projects highlighting my skills and creativity.</p>
-      </div>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 bg-lavender">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-slate-700 mb-10">Projects</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Project Card -->
+          <div class="bg-white rounded-lg shadow hover:shadow-xl transition p-4">
+            <img src="images/translator.jpg" alt="Translator" class="rounded mb-4 h-40 object-cover w-full" />
+            <h3 class="text-lg font-bold mb-2">Translator App</h3>
+            <p class="text-sm mb-3">Translates text between multiple languages using a public API.</p>
+            <a href="https://filipalopescarvalho.github.io/translator/" target="_blank" class="text-softLavender hover:underline">View Project</a>
+          </div>
 
-      <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
+          <div class="bg-white rounded-lg shadow hover:shadow-xl transition p-4">
+            <img src="images/comedianbot.jpg" alt="Comedian Bot" class="rounded mb-4 h-40 object-cover w-full" />
+            <h3 class="text-lg font-bold mb-2">Comedian Bot</h3>
+            <p class="text-sm mb-3">A playful chatbot that tells jokes and interacts using JavaScript.</p>
+            <a href="https://filipalopescarvalho.github.io/comedianbot/" target="_blank" class="text-softLavender hover:underline">View Project</a>
+          </div>
 
-        <article class="bg-lavender rounded-2xl shadow-lg p-6 hover:shadow-2xl transition flex flex-col">
-          <img src="images/translator.jpg" alt="Translator App" class="rounded-lg object-cover mb-6 aspect-video" />
-          <h3 class="text-2xl font-bold text-violet-700 mb-3">Translator App</h3>
-          <p class="text-slate-700 mb-4 flex-grow">
-            A language translator built with JavaScript that uses an API to convert text between languages.
-          </p>
-          <a href="https://filipalopescarvalho.github.io/translator/" target="_blank" class="mt-auto inline-block text-violet-600 font-semibold hover:underline">
-            View Project →
-          </a>
-        </article>
-
-        <article class="bg-lavender rounded-2xl shadow-lg p-6 hover:shadow-2xl transition flex flex-col">
-          <img src="images/comedianbot.jpg" alt="Comedian Bot" class="rounded-lg object-cover mb-6 aspect-video" />
-          <h3 class="text-2xl font-bold text-violet-700 mb-3">Comedian Bot</h3>
-          <p class="text-slate-700 mb-4 flex-grow">
-            A fun chatbot-style website with jokes and playful interaction, built with HTML, CSS, and JavaScript.
-          </p>
-          <a href="https://filipalopescarvalho.github.io/comedianbot/" target="_blank" class="mt-auto inline-block text-violet-600 font-semibold hover:underline">
-            View Project →
-          </a>
-        </article>
-
-        <article class="bg-lavender rounded-2xl shadow-lg p-6 hover:shadow-2xl transition flex flex-col">
-          <img src="images/triviagame.jpg" alt="Trivia Game" class="rounded-lg object-cover mb-6 aspect-video" />
-          <h3 class="text-2xl font-bold text-violet-700 mb-3">Trivia Game</h3>
-          <p class="text-slate-700 mb-4 flex-grow">
-            A multiple-choice quiz web app with scoring logic and JavaScript interactivity. Clean and responsive design.
-          </p>
-          <a href="https://filipalopescarvalho.github.io/triviagame/" target="_blank" class="mt-auto inline-block text-violet-600 font-semibold hover:underline">
-            View Project →
-          </a>
-        </article>
-
+          <div class="bg-white rounded-lg shadow hover:shadow-xl transition p-4">
+            <img src="images/triviagame.jpg" alt="Trivia Game" class="rounded mb-4 h-40 object-cover w-full" />
+            <h3 class="text-lg font-bold mb-2">Trivia Game</h3>
+            <p class="text-sm mb-3">Fun multiple-choice quiz with score tracking and simple logic.</p>
+            <a href="https://filipalopescarvalho.github.io/triviagame/" target="_blank" class="text-softLavender hover:underline">View Project</a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="bg-bluegray py-20 px-6 md:px-20">
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 bg-white">
       <div class="max-w-xl mx-auto text-center">
-        <h2 class="text-4xl font-extrabold mb-8 text-slate-800 tracking-tight">Get in Touch</h2>
-        <form action="https://formsubmit.co/filopesdecarvalho@gmail.com" method="POST" class="space-y-6 text-left">
-          <input type="text" name="name" placeholder="Your Name" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet-500" />
-          <input type="email" name="email" placeholder="Your Email" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet-500" />
-          <textarea name="message" rows="5" placeholder="Your Message" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet-500"></textarea>
-          <button type="submit" class="w-full bg-violet-600 text-white py-3 rounded-lg font-semibold hover:bg-violet-700 transition">
-            Send Message
-          </button>
+        <h2 class="text-3xl font-bold mb-8 text-slate-700">Get in Touch</h2>
+        <form action="https://formsubmit.co/filopesdecarvalho@gmail.com" method="POST" class="space-y-4 text-left">
+          <input type="text" name="name" placeholder="Your Name" required class="w-full border rounded px-4 py-2" />
+          <input type="email" name="email" placeholder="Your Email" required class="w-full border rounded px-4 py-2" />
+          <textarea name="message" rows="4" placeholder="Your Message" required class="w-full border rounded px-4 py-2"></textarea>
+          <button type="submit" class="w-full bg-softLavender text-white py-2 rounded hover:bg-purple-700 transition">Send Message</button>
         </form>
       </div>
     </section>
 
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-violet-600 text-white text-center py-6 mt-12">
-    <p>&copy; 2025 Filipa Lopes</p>
-    <p class="mt-2 space-x-4">
-      <a href="https://github.com/filipalopescarvalho" class="hover:underline" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.linkedin.com/in/filipa-lopes-de-carvalho-6878222b0" class="hover:underline" target="_blank" rel="noopener">LinkedIn</a>
-    </p>
-  </footer>
-
-  <script>
-    // Header disappear on scroll down, reappear on scroll up
-    let lastScroll = 0;
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-      const currentScroll = window.pageYOffset;
-      if (currentScroll <= 0) {
-        header.style.transform = 'translateY(0)';
-        return;
-      }
-      if (currentScroll > lastScroll) {
-        // Scrolling down
-        header.style.transform = 'translateY(-100%)';
-      } else {
-        // Scrolling up
-        header.style.transform = 'translateY(0)';
-      }
-      lastScroll = currentScroll;
-    });
-  </script>
-
-</body>
+    <!-- Footer -->
+    <footer class="text-center py-6 text-sm text-slate-500 bg-lavender">
+      &copy; 2025 Filipa Lopes
+    </footer>
+  </body>
 </html>
