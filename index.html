@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Filipa Lopes | Portfolio</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
   <script src="https://cdn.tailwindcss.com"></script>
@@ -15,9 +15,9 @@
           },
           colors: {
             lavender: '#f4f1fb',
+            lavenderDark: '#7c6bbf',
             bluegray: '#c7d2fe',
             violet: '#a78bfa',
-            darklavender: '#7b61ff',
             slate: '#374151'
           }
         }
@@ -27,139 +27,243 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f1fb; /* lavender */
+      color: #374151; /* slate */
+    }
+
+    /* Header hide/show on scroll */
+    header {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      will-change: transform;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: #a78bfa; /* violet */
+      color: #374151; /* slate text */
+      box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
+    }
+
+    header.hidden {
+      transform: translateY(-100%);
+      box-shadow: none;
+    }
+
+    /* Skills headings darker lavender */
+    #skills h3, #skills h4, #skills h5 {
+      color: #7c6bbf; /* lavenderDark */
+    }
+
+    /* Resume button */
+    .btn-primary {
+      background-color: #a78bfa;
+      color: #374151;
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgb(167 139 250 / 0.3);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      user-select: none;
+    }
+    .btn-primary:hover {
+      background-color: #7c6bbf;
+      box-shadow: 0 6px 10px rgb(124 107 191 / 0.5);
+      transform: translateY(-2px);
+      color: #fafafa;
+      text-decoration: none;
+    }
+    .btn-primary:active {
+      transform: translateY(0);
+      box-shadow: 0 3px 6px rgb(124 107 191 / 0.4);
+    }
+
+    /* Projects image style */
+    .project-img {
+      border-radius: 0.75rem;
+      object-fit: cover;
+      height: 160px;
+      width: 100%;
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover .project-img {
+      transform: scale(1.05);
     }
   </style>
 </head>
+<body>
 
-<body class="bg-lavender text-slate">
-
-  <!-- HEADER -->
-  <header class="bg-violet-200 text-slate-700 shadow">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold">Filipa Lopes</h1>
-      <nav class="space-x-4 text-sm md:text-base">
-        <a href="#about" class="hover:underline">About</a>
-        <a href="#skills" class="hover:underline">Skills</a>
-        <a href="#projects" class="hover:underline">Projects</a>
-        <a href="#contact" class="hover:underline">Contact</a>
-        <a href="files/Filipa_Lopes_Resume.pdf" download
-           class="inline-block bg-violet text-slate-700 font-semibold px-4 py-2 rounded-lg shadow hover:bg-violet-600 transition">
-          ⬇️ Resume
-        </a>
-      </nav>
-    </div>
+  <header id="page-header" class="px-6 md:px-12 py-4 flex justify-between items-center shadow">
+    <h1 class="text-2xl font-bold select-none">Filipa Lopes</h1>
+    <nav class="flex flex-wrap items-center gap-6 text-sm md:text-base font-semibold">
+      <a href="#about" class="hover:underline hover:text-violet-700 transition">About</a>
+      <a href="#skills" class="hover:underline hover:text-violet-700 transition">Skills</a>
+      <a href="#projects" class="hover:underline hover:text-violet-700 transition">Projects</a>
+      <a href="#contact" class="hover:underline hover:text-violet-700 transition">Contact</a>
+      <a href="files/Filipa_Lopes_Resume.pdf" download class="btn-primary ml-4 whitespace-nowrap">
+        Download Resume
+      </a>
+    </nav>
   </header>
 
-  <!-- ABOUT -->
-  <section id="about" class="py-16 px-4 bg-violet-50 text-gray-800">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-4xl font-bold mb-6 text-violet-700">About Me</h2>
+  <main class="max-w-6xl mx-auto pt-24 px-6 md:px-12">
+
+    <!-- About -->
+    <section id="about" class="text-center mb-20 max-w-3xl mx-auto">
+      <h2 class="text-5xl font-extrabold mb-8 text-violet-700">About Me</h2>
       <img src="images/profile1.jpg" alt="Profile Picture"
-           class="w-40 h-40 rounded-full mx-auto mb-6 shadow-lg object-cover border-4 border-violet-200" />
-      
-      <p class="text-lg leading-relaxed mb-8">
+           class="w-40 h-40 rounded-full mx-auto mb-8 shadow-xl object-cover border-4 border-violet-200" />
+      <p class="text-lg leading-relaxed font-[Segoe UI] max-w-xl mx-auto mb-8">
         Hi, I’m <strong>Filipa Lopes de Carvalho</strong>, a web development student at IU International Hochschule.
         I focus on HTML, CSS, JavaScript, TypeScript, React, and Python to build user-friendly and responsive web experiences.
-        I love turning ideas into clean, functional code, and I’m always eager to learn and explore new technologies.<br><br>
+        I love turning ideas into clean, functional code, and I’m always eager to learn and explore new technologies.
+        <br /><br />
         Let’s connect for projects, collaborations, or just a chat about tech!
       </p>
-  
-      <a href="files/Filipa_Lopes_Resume.pdf" download
-         class="inline-block bg-violet-300 text-slate-700 font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-violet-600 hover:text-white hover:scale-105 transition duration-300">
-        ⬇️ Download Resume
+      <a href="files/Filipa_Lopes_Resume.pdf" download class="btn-primary inline-block">
+        Download Resume
       </a>
-    </div>
-  </section>
+    </section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="bg-lavender py-16 px-4">
-    <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-4xl font-bold text-slate-700 mb-12">Skills</h2>
-  
-      <div class="grid md:grid-cols-3 gap-8">
-        
-        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition border border-pink-100">
-          <h3 class="text-xl font-semibold text-darklavender mb-4">Frontend Development</h3>
-          <ul class="space-y-2 text-slate-700">
+    <!-- Skills -->
+    <section id="skills" class="mb-24">
+      <h2 class="text-4xl font-bold text-center mb-12 text-slate-700">Skills</h2>
+      <div class="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+        <!-- Skill cards -->
+        <article
+          class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition border border-gray-200"
+          data-aos="fade-up"
+        >
+          <h3 class="text-2xl font-semibold mb-6">Frontend Development</h3>
+          <ul class="space-y-3 text-slate-700 text-lg">
             <li class="bg-pink-50 rounded-lg px-4 py-2">HTML & CSS</li>
             <li class="bg-pink-50 rounded-lg px-4 py-2">JavaScript & TypeScript</li>
             <li class="bg-pink-50 rounded-lg px-4 py-2">React</li>
             <li class="bg-pink-50 rounded-lg px-4 py-2">Responsive & Accessible Design</li>
           </ul>
-        </div>
+        </article>
 
-        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition border border-violet-100">
-          <h3 class="text-xl font-semibold text-darklavender mb-4">Backend Development</h3>
-          <ul class="space-y-2 text-slate-700">
-            <li class="bg-pink-50 rounded-lg px-4 py-2">Python</li>
-            <li class="bg-pink-50 rounded-lg px-4 py-2">Node.js & Express</li>
-            <li class="bg-pink-50 rounded-lg px-4 py-2">REST APIs</li>
-            <li class="bg-pink-50 rounded-lg px-4 py-2">Basic Database Integration</li>
+        <article
+          class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition border border-gray-200"
+          data-aos="fade-up" data-aos-delay="100"
+        >
+          <h3 class="text-2xl font-semibold mb-6">Backend Development</h3>
+          <ul class="space-y-3 text-slate-700 text-lg">
+            <li class="bg-violet-50 rounded-lg px-4 py-2">Python</li>
+            <li class="bg-violet-50 rounded-lg px-4 py-2">Node.js & Express</li>
+            <li class="bg-violet-50 rounded-lg px-4 py-2">REST APIs</li>
+            <li class="bg-violet-50 rounded-lg px-4 py-2">Basic Database Integration</li>
           </ul>
-        </div>
+        </article>
 
-        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition border border-blue-100">
-          <h3 class="text-xl font-semibold text-darklavender mb-4">Tools & Workflow</h3>
-          <ul class="space-y-2 text-slate-700">
-            <li class="bg-pink-50 rounded-lg px-4 py-2">Git & GitHub</li>
-            <li class="bg-pink-50 rounded-lg px-4 py-2">Visual Studio Code</li>
-            <li class="bg-pink-50 rounded-lg px-4 py-2">Agile Development</li>
+        <article
+          class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition border border-gray-200"
+          data-aos="fade-up" data-aos-delay="200"
+        >
+          <h3 class="text-2xl font-semibold mb-6">Tools & Workflow</h3>
+          <ul class="space-y-3 text-slate-700 text-lg">
+            <li class="bg-blue-50 rounded-lg px-4 py-2">Git & GitHub</li>
+            <li class="bg-blue-50 rounded-lg px-4 py-2">Visual Studio Code</li>
+            <li class="bg-blue-50 rounded-lg px-4 py-2">Agile Development</li>
           </ul>
-        </div>
-
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="py-16 px-6" data-aos="fade-up">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-10 text-slate-700">Projects</h2>
-      <div class="grid md:grid-cols-3 gap-8">
+    <!-- Projects -->
+    <section id="projects" class="mb-24" data-aos="fade-up">
+      <h2 class="text-4xl font-bold text-center mb-12">Projects</h2>
+      <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        <!-- Project cards -->
+        <article class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition" data-aos="zoom-in">
+          <img src="images/translator.jpg" alt="Translator" class="project-img" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Translator App</h3>
+            <p class="text-gray-700 mb-4">
+              A language translator built with JavaScript that uses an API to convert text between languages.
+            </p>
+            <a href="https://filipalopescarvalho.github.io/translator/" target="_blank"
+              class="text-violet-600 font-semibold hover:underline transition"
+              >View Project</a
+            >
+          </div>
+        </article>
 
-        <div class="bg-white rounded-lg shadow hover:shadow-xl transition p-4" data-aos="zoom-in">
-          <img src="images/translator.jpg" alt="Translator App" class="rounded mb-4 h-40 object-cover w-full">
-          <h3 class="text-lg font-bold mb-2">Translator App</h3>
-          <p class="text-sm mb-3">A language translator built with JavaScript that uses an API to convert text between languages.</p>
-          <a href="https://filipalopescarvalho.github.io/translator/" target="_blank" class="text-violet-600 hover:underline">View Project</a>
-        </div>
+        <article class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition" data-aos="zoom-in" data-aos-delay="100">
+          <img src="images/comedianbot.jpg" alt="Comedian Bot" class="project-img" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Comedian Bot</h3>
+            <p class="text-gray-700 mb-4">
+              A fun chatbot-style website with jokes and playful interaction, built with HTML, CSS, and JavaScript.
+            </p>
+            <a href="https://filipalopescarvalho.github.io/comedianbot/" target="_blank"
+              class="text-violet-600 font-semibold hover:underline transition"
+              >View Project</a
+            >
+          </div>
+        </article>
 
-        <div class="bg-white rounded-lg shadow hover:shadow-xl transition p-4" data-aos="zoom-in">
-          <img src="images/comedianbot.jpg" alt="Comedian Bot" class="rounded mb-4 h-40 object-cover w-full">
-          <h3 class="text-lg font-bold mb-2">Comedian Bot</h3>
-          <p class="text-sm mb-3">A fun chatbot-style website with jokes and playful interaction, built with HTML, CSS, and JavaScript.</p>
-          <a href="https://filipalopescarvalho.github.io/comedianbot/" target="_blank" class="text-violet-600 hover:underline">View Project</a>
-        </div>
-
-        <div class="bg-white rounded-lg shadow hover:shadow-xl transition p-4" data-aos="zoom-in">
-          <img src="images/triviagame.jpg" alt="Trivia Game" class="rounded mb-4 h-40 object-cover w-full">
-          <h3 class="text-lg font-bold mb-2">Trivia Game</h3>
-          <p class="text-sm mb-3">A multiple-choice quiz web app with scoring logic and JavaScript interactivity. Clean and responsive design.</p>
-          <a href="https://filipalopescarvalho.github.io/triviagame/" target="_blank" class="text-violet-600 hover:underline">View Project</a>
-        </div>
-
+        <article class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition" data-aos="zoom-in" data-aos-delay="200">
+          <img src="images/triviagame.jpg" alt="Trivia Game" class="project-img" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Trivia Game</h3>
+            <p class="text-gray-700 mb-4">
+              A multiple-choice quiz web app with scoring logic and JavaScript interactivity. Clean and responsive design.
+            </p>
+            <a href="https://filipalopescarvalho.github.io/triviagame/" target="_blank"
+              class="text-violet-600 font-semibold hover:underline transition"
+              >View Project</a
+            >
+          </div>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="bg-bluegray py-16 px-6" data-aos="fade-up">
-    <div class="max-w-xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-8 text-slate-700">Get in Touch</h2>
-      <form action="https://formsubmit.co/filopesdecarvalho@gmail.com" method="POST" class="space-y-4 text-left">
-        <input type="text" name="name" placeholder="Your Name" required class="w-full border rounded px-4 py-2">
-        <input type="email" name="email" placeholder="Your Email" required class="w-full border rounded px-4 py-2">
-        <textarea name="message" rows="4" placeholder="Your Message" required class="w-full border rounded px-4 py-2"></textarea>
-        <button type="submit" class="w-full bg-violet-400 text-white py-2 rounded hover:bg-violet-500 transition">Send Message</button>
+    <!-- Contact -->
+    <section id="contact" class="bg-bluegray rounded-xl py-16 px-8 max-w-xl mx-auto" data-aos="fade-up">
+      <h2 class="text-4xl font-bold mb-10 text-center text-slate-800">Get in Touch</h2>
+      <form
+        action="https://formsubmit.co/filopesdecarvalho@gmail.com"
+        method="POST"
+        class="space-y-6"
+      >
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          required
+          class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet-400 transition"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          required
+          class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet-400 transition"
+        />
+        <textarea
+          name="message"
+          rows="5"
+          placeholder="Your Message"
+          required
+          class="w-full border border-gray-300 rounded-lg px-4 py-3 resize-none focus:outline-none focus:ring-2 focus:ring-violet-400 transition"
+        ></textarea>
+        <button
+          type="submit"
+          class="w-full bg-violet-400 text-white py-3 rounded-lg font-semibold hover:bg-violet-500 transition"
+        >
+          Send Message
+        </button>
       </form>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- FOOTER -->
-  <footer class="bg-violet-200 text-slate-700 text-center py-6 mt-12">
+  <footer class="text-slate-700 text-center py-8 mt-20 border-t border-gray-200">
     <p>&copy; 2025 Filipa Lopes</p>
-    <p class="mt-2">
-      <a href="https://github.com/filipalopescarvalho" class="hover:underline" target="_blank">GitHub</a> •
+    <p class="mt-3 space-x-4">
+      <a href="https://github.com/filipalopescarvalho" class="hover:underline" target="_blank">GitHub</a>
       <a href="https://www.linkedin.com/in/filipa-lopes-de-carvalho-6878222b0" class="hover:underline" target="_blank">LinkedIn</a>
     </p>
   </footer>
@@ -169,9 +273,24 @@
     AOS.init({
       once: true,
       duration: 700,
-      offset: 80
+      offset: 80,
+    });
+
+    // Hide header on scroll down, show on scroll up
+    let lastScrollY = window.pageYOffset;
+    const header = document.getElementById('page-header');
+
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.pageYOffset;
+      if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        // Scrolling down
+        header.classList.add('hidden');
+      } else {
+        // Scrolling up
+        header.classList.remove('hidden');
+      }
+      lastScrollY = currentScrollY;
     });
   </script>
-
 </body>
 </html>
