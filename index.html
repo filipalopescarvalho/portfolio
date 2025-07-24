@@ -30,9 +30,7 @@
         <h1 class="text-xl font-bold text-gray-700">Filipa Lopes</h1>
 
         <!-- Hamburger Button (Mobile) -->
-        <button id="menu-btn" class="md:hidden text-3xl text-gray-700">
-          ☰
-        </button>
+        <button id="menu-btn" class="md:hidden text-3xl text-gray-700">☰</button>
 
         <!-- Navigation Menu -->
         <nav id="menu" class="hidden md:flex gap-4 items-center text-sm md:text-base">
@@ -142,73 +140,62 @@
         </div>
       </div>
     </section>
-<!-- Projects Section -->
-<section id="projects" class="py-20 px-6 bg-white rounded-lg max-w-6xl mx-auto mt-12">
-  <h2 class="text-4xl font-bold text-center text-black mb-12">Projects</h2>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-    <!-- Translator App -->
-    <div
-      class="bg-gray-200 rounded-xl shadow-lg p-6 cursor-pointer transform transition-transform duration-300 hover:scale-105 flex flex-col mb-24"
-      style="aspect-ratio: 1 / 1;"
-    >
-      <img src="images/translator.jpg" alt="Translator App" class="rounded-md mb-4 object-cover flex-shrink-0 h-40 w-full" />
-      <h3 class="text-2xl font-semibold text-black mb-4">Translator App</h3>
-      <p class="text-black mb-6 leading-relaxed flex-grow">
-        A language translator built with JavaScript that uses an API to convert text between languages.
-      </p>
-      <div class="flex flex-wrap gap-2 mb-6">
-        <span class="bg-gray-300 text-black text-xs font-semibold px-3 py-1 rounded-full">JavaScript</span>
-        <span class="bg-gray-300 text-black text-xs font-semibold px-3 py-1 rounded-full">API</span>
-        <span class="bg-gray-300 text-black text-xs font-semibold px-3 py-1 rounded-full">HTML</span>
-        <span class="bg-gray-300 text-black text-xs font-semibold px-3 py-1 rounded-full">CSS</span>
-      </div>
-      <a href="https://filipalopescarvalho.github.io/translator/" target="_blank" class="text-black font-semibold hover:underline">
-        View Project →
-      </a>
-    </div>
 
-    <!-- Comedian Bot -->
-    <div
-      class="bg-gray-200 rounded-xl shadow-lg p-6 cursor-pointer transform transition-transform duration-300 hover:scale-105 flex flex-col mb-24"
-      style="aspect-ratio: 1 / 1;"
-    >
-      <img src="images/comedianbot.jpg" alt="Comedian Bot" class="rounded-md mb-4 object-cover flex-shrink-0 h-40 w-full" />
-      <h3 class="text-2xl font-semibold text-black mb-4">Comedian Bot</h3>
-      <p class="text-black mb-6 leading-relaxed flex-grow">
-        A fun chatbot-style website with jokes and playful interaction, built with HTML, CSS, and JavaScript.
-      </p>
-      <div class="flex flex-wrap gap-2 mb-6">
-        <span class="bg-gray-300 text-black text-xs font-semibold px-3 py-1 rounded-full">HTML</span>
-        <span class="bg-gray-300 text-black text-xs font-semibold px-3 py-1 rounded-full">CSS</span>
-        <span class="bg-gray-300 text-black text-xs font-semibold px-3 py-1 rounded-full">JavaScript</span>
-      </div>
-      <a href="https://filipalopescarvalho.github.io/comedianbot/" target="_blank" class="text-black font-semibold hover:underline">
-        View Project →
-      </a>
-    </div>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 bg-white rounded-lg max-w-6xl mx-auto mt-24">
+      <h2 class="text-4xl font-bold text-center text-black mb-12">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <!-- Project Card Template -->
+        <div class="bg-gray-200 rounded-xl shadow-lg p-6 transition hover:scale-105 flex flex-col">
+          <img src="images/translator.jpg" alt="Translator App" class="rounded-md mb-4 object-cover h-40 w-full" />
+          <h3 class="text-2xl font-semibold text-black mb-4">Translator App</h3>
+          <p class="text-black mb-4 flex-grow">
+            A language translator built with JavaScript that uses an API to convert text between languages.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-gray-300 text-black text-xs font-semibold px-3 py-1 rounded-full">JavaScript</span>
+            <span class="bg-gray-300 text-black text-xs font-semibold px-3 py-1 rounded-full">API</span>
+            <span class="bg-gray-300 text-black text-xs font-semibold px-3 py-1 rounded-full">HTML</span>
+            <span class="bg-gray-300 text-black text-xs font-semibold px-3 py-1 rounded-full">CSS</span>
+          </div>
+          <a href="https://filipalopescarvalho.github.io/translator/" target="_blank" class="text-black font-semibold hover:underline">
+            View Project →
+          </a>
+        </div>
 
-    <!-- Trivia Game -->
-    <div
-      class="bg-gray-200 rounded-xl shadow-lg p-6 cursor-pointer transform transition-transform duration-300 hover:scale-105 flex flex-col mb-24"
-      style="aspect-ratio: 1 / 1;"
-    >
-      <img src="images/triviagame.jpg" alt="Trivia Game" class="rounded-md mb-4 object-cover flex-shrink-0 h-40 w-full" />
-      <h3 class="text-2xl font-semibold text-black mb-4">Trivia Game</h3>
-      <p class="text-black mb-6 leading-relaxed flex-grow">
-        A multiple-choice quiz web app with scoring logic and JavaScript interactivity. Clean and responsive design.
-      </p>
-      <div class="flex flex-wrap gap-2 mb-6">
-        <span class="bg-gray-300 text-black text-xs font-semibold px-3 py-1 rounded-full">JavaScript</span>
-        <span class="bg-gray-300 text-black text-xs font-semibold px-3 py-1 rounded-full">HTML</span>
-        <span class="bg-gray-300 text-black text-xs font-semibold px-3 py-1 rounded-full">CSS</span>
-      </div>
-      <a href="https://filipalopescarvalho.github.io/triviagame/" target="_blank" class="text-black font-semibold hover:underline">
-        View Project →
-      </a>
-    </div>
-  </div>
-</section>
+        <div class="bg-gray-200 rounded-xl shadow-lg p-6 transition hover:scale-105 flex flex-col">
+          <img src="images/comedianbot.jpg" alt="Comedian Bot" class="rounded-md mb-4 object-cover h-40 w-full" />
+          <h3 class="text-2xl font-semibold text-black mb-4">Comedian Bot</h3>
+          <p class="text-black mb-4 flex-grow">
+            A fun chatbot-style website with jokes and playful interaction, built with HTML, CSS, and JavaScript.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-gray-300 text-black text-xs font-semibold px-3 py-1 rounded-full">HTML</span>
+            <span class="bg-gray-300 text-black text-xs font-semibold px-3 py-1 rounded-full">CSS</span>
+            <span class="bg-gray-300 text-black text-xs font-semibold px-3 py-1 rounded-full">JavaScript</span>
+          </div>
+          <a href="https://filipalopescarvalho.github.io/comedianbot/" target="_blank" class="text-black font-semibold hover:underline">
+            View Project →
+          </a>
+        </div>
 
+        <div class="bg-gray-200 rounded-xl shadow-lg p-6 transition hover:scale-105 flex flex-col">
+          <img src="images/triviagame.jpg" alt="Trivia Game" class="rounded-md mb-4 object-cover h-40 w-full" />
+          <h3 class="text-2xl font-semibold text-black mb-4">Trivia Game</h3>
+          <p class="text-black mb-4 flex-grow">
+            A multiple-choice quiz web app with scoring logic and JavaScript interactivity. Clean and responsive design.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-gray-300 text-black text-xs font-semibold px-3 py-1 rounded-full">JavaScript</span>
+            <span class="bg-gray-300 text-black text-xs font-semibold px-3 py-1 rounded-full">HTML</span>
+            <span class="bg-gray-300 text-black text-xs font-semibold px-3 py-1 rounded-full">CSS</span>
+          </div>
+          <a href="https://filipalopescarvalho.github.io/triviagame/" target="_blank" class="text-black font-semibold hover:underline">
+            View Project →
+          </a>
+        </div>
+      </div>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="py-20 px-6 bg-gray-200 rounded-lg max-w-6xl mx-auto mt-12">
